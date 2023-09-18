@@ -4,6 +4,8 @@ install:
 
 test:
 	python3 -m pytest -vv --cov=main test_*.py
+	py.test --nbval-lax *.ipynb
+
 
 format:	
 	black *.py 
