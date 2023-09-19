@@ -27,16 +27,22 @@ def data_visual(data):
     plt.show()
 
 def compute_mean(data):
-    return data.mean()
+    # Select only numeric columns
+    numeric_data = data.select_dtypes(include=['number'])
+    return numeric_data.mean()
+
 
 def compute_median(data):
-    return data.median()
+    numeric_data = data.select_dtypes(include=['number'])
+    return numeric_data.median()
 
 def compute_mode(data):
-    return data.mode()
+    numeric_data = data.select_dtypes(include=['number'])
+    return numeric_data.mode()
 
 def compute_std_dev(data):
-    return data.std()
+    numeric_data = data.select_dtypes(include=['number'])
+    return numeric_data.std()
 
 def main():
     my_df = load_data("cars.csv")
