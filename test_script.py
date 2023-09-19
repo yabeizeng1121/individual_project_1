@@ -1,5 +1,5 @@
 import unittest
-import polars as pl
+import pandas as pd
 from main_script import main
 from lib import load_data, data_summary
 
@@ -7,7 +7,8 @@ class TestScript(unittest.TestCase):
 
     def setUp(self):
         self.data_path = "cars.csv"
-        self.df = pl.read_csv(self.data_path)
+        self.df = pd.read_csv(self.data_path, sep=';')
+
 
     def test_load_data(self):
         data = load_data(self.data_path)
