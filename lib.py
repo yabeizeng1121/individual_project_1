@@ -25,6 +25,19 @@ def data_visual(data):
     sns.boxplot(x = 'Origin', y = 'Weight',
                 palette="Blues", data = data)
     plt.show()
+
+def compute_mean(data):
+    return data.mean()
+
+def compute_median(data):
+    return data.median()
+
+def compute_mode(data):
+    return data.mode()
+
+def compute_std_dev(data):
+    return data.std()
+
 def main():
     my_df = load_data("cars.csv")
     print(data_summary(my_df))
