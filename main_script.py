@@ -1,10 +1,10 @@
-import polars as pl  
+import pandas as pd
 from lib import compute_mean, compute_median, compute_mode, compute_std_dev
 
 def main():
 
     data_path = "cars.csv"
-    df = pl.read_csv(data_path)  
+    df = pd.read_csv(data_path, sep=';')
 
     mean_values = compute_mean(df)
     median_values = compute_median(df)
