@@ -26,3 +26,7 @@ jobs:
         run: make test
       - name: format
         run: make format
+      - name: Test Jupyter Notebook with nbval
+        run: |
+          pip install pytest nbval
+          pytest --nbval individual_project_1.ipynb
