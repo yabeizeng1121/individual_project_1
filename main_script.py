@@ -1,5 +1,6 @@
 import polars as pl  
-from lib import *  
+from lib import load_data, data_summary, data_visual
+
 
 def main():
 
