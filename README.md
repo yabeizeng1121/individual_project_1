@@ -74,15 +74,3 @@ Our repository uses GitHub Actions to automate the execution of all Makefile com
 ## Demo Video
 
 For a detailed walkthrough of the project and its functionality, please watch our [demo video](YOUR_YOUTUBE_LINK_HERE).
-
-## Contributing
-
-If you'd like to contribute to this project, please fork the repository and submit a pull request.
-
-## License
-
-[MIT License](https://opensource.org/licenses/MIT)
-
----
-
-Make sure to replace placeholders like `your_notebook_name.ipynb` and `YOUR_YOUTUBE_LINK_HERE` with the actual names and links. Adjust other parts of the README as necessary to fit your project's specifics.
