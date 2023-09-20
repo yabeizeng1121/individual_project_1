@@ -3,22 +3,18 @@ install:
 		pip install -r requirements.txt
 
 test:
-	python3 -m pytest -vv --cov=main test_*.py
-	py.test --nbval-lax *.ipynb
+	python -m pytest -vv --cov=main test_*.py
+	py.test --nbval *.ipynb
 
-
-format:	
-	black *.py 
+format:
+	nbqa black *.ipynb &&\
+	black *.py && black test_*.py
 
 lint:
-	pylint --disable=R,C,locally-disabled --ignore-patterns=test_.*?py *.py
-	ruff check *.py	
-# container-lint:
-# 	docker run --rm -i hadolint/hadolint < Dockerfile
+	ruff check test_*.py && ruff check *.py
+	nbqa ruff *.ipynb
 
-# refactor: format lint
-
-# deploy:
-# 	#deploy goes here
+deploy:
+	# deploy goes here
 		
-all: install lint test format deploy
+all: install lint test format
