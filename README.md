@@ -1,62 +1,78 @@
+# IDS706 Individual Project 1 
 
-## IDS706 Individual Project 1
+This project provides a comprehensive data analysis for a car dataset, including a Jupyter notebook, a Python script, shared library functions, and automated testing and linting via Makefile and GitHub Actions.
 
-This library provides a set of functions to load, summarize, and visualize data from a car dataset. The main functions include loading the data from a CSV file, generating a summary of the data, and creating a boxplot visualization based on the car's origin and weight.
+## Project Structure
 
-## Requirements
-
-- Python 3.x
-- pandas
-- seaborn
-- matplotlib
-
-## Installation
-
-1. Ensure you have Python 3.x installed.
-2. Install the required packages using pip:
-
-```bash
-pip install pandas seaborn matplotlib
-```
+- **Jupyter Notebook**: A detailed notebook that demonstrates the data analysis process.
+- **Python Script**: A standalone script for data analysis.
+- **lib.py**: A shared library that contains common functions used by both the notebook and the script.
+- **Makefile**: Automates the testing, linting, and formatting processes.
+- **Requirements.txt**: Lists all the necessary Python packages for this project.
 
 ## Usage
 
-### lib.py
-
-This script contains the main functions for data analysis. Here's a brief overview:
-
-- `load_data(data_path)`: Loads data from a CSV file. The data should be separated by semicolons (`;`).
-- `data_summary(data)`: Returns a summary (using `describe()`) of the provided data.
-- `data_visual(data)`: Displays a boxplot visualization of the data based on the car's origin and weight.
-- `main()`: A demonstration function that loads data from "cars.csv", prints its summary, and displays the boxplot visualization.
-
-To run the script:
-
-```bash
-python lib.py
-```
-
-### Test File
-
-Ensure you have your test file in the same directory as `lib.py`. To run the tests:
-
-```bash
-python test_filename.py
-```
-
-Replace `test_filename.py` with the actual name of your test file.
-
 ### Jupyter Notebook
 
-If you're using a Jupyter notebook to visualize and test the functions:
+The notebook provides a visual interface for data analysis. Ensure you have Jupyter installed and run:
 
-1. Import the necessary functions from `lib.py`:
-
-```python
-from lib import load_data, data_summary, data_visual
+```bash
+jupyter notebook your_notebook_name.ipynb
 ```
 
-2. Use the functions as demonstrated in the `main()` function of `lib.py`.
+### Python Script
+
+To execute the standalone script:
+
+```bash
+python your_script_name.py
+```
+
+### lib.py
+
+This shared library contains essential functions for data analysis. It's used by both the notebook and the script.
+
+### Makefile
+
+The Makefile automates several tasks:
+
+1. **Running Tests**: This will run tests for the notebook, script, and lib.
+
+```bash
+make test
+```
+
+2. **Formatting Code**: This will format the code using Python black.
+
+```bash
+make format
+```
+
+3. **Linting Code**: This will lint the code using Ruff.
+
+```bash
+make lint
+```
+
+### Testing
+
+- **nbval plugin for pytest**: The Jupyter notebook is tested using the nbval plugin for pytest.
+- **test_script.py**: Contains tests for the Python script.
+- **test_lib.py**: Contains tests for the shared library.
+
+To install the required packages:
+
+```bash
+pip install -r requirements.txt
+```
+
+## GitHub Actions
+
+Our repository uses GitHub Actions to automate the execution of all Makefile commands. Check the badges in this README for the status of each action.
+
+## Demo Video
+
+For a detailed walkthrough of the project and its functionality, please watch our [demo video](YOUR_YOUTUBE_LINK_HERE).
 
 ## Contributing
 
@@ -68,4 +84,4 @@ If you'd like to contribute to this project, please fork the repository and subm
 
 ---
 
-Note: You might need to adjust some parts of the README, such as the test file name, or add more details if necessary.
+Make sure to replace placeholders like `your_notebook_name.ipynb` and `YOUR_YOUTUBE_LINK_HERE` with the actual names and links. Adjust other parts of the README as necessary to fit your project's specifics.
