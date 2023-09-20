@@ -1,10 +1,10 @@
 import pandas as pd
-from lib import data_load, data_summary, data_visual
+from lib import load_data, data_summary, data_visual
 
 def main():
 
     data_path = "cars.csv"
-    df = pd.read_csv(data_path, sep=';')
+    df = load_data(data_path)
     sum_data = data_summary(df)
 
     print(sum_data)
