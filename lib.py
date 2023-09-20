@@ -1,8 +1,3 @@
-# This is the main script for IDS706 mini project 2
-# In the main.py, the code will read a csv dataset and return a data summary
-
-# the code start here
-
 # loading packages
 import warnings
 import pandas as pd
