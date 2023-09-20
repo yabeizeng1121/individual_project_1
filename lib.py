@@ -4,6 +4,7 @@
 # the code start here
 
 # loading packages
+import warnings
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -19,12 +20,12 @@ def data_summary(data):
     main_sum = data.describe()
     return main_sum
 
-
 def data_visual(data):
-    sns.set_theme(style="ticks", palette="pastel")
-    sns.boxplot(x = 'Origin', y = 'Weight',
-                palette="Blues", data = data)
-    plt.show()
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        sns.set_theme(style="ticks", palette="pastel")
+        sns.boxplot(x='Origin', y='Weight', palette="Blues", data=data)
+        plt.show()
 
 def compute_mean(data):
     # Select only numeric columns
