@@ -1,3 +1,4 @@
+[![CI](https://github.com/yabeizeng1121/individual_project_1/actions/workflows/cicd.yml/badge.svg)](https://github.com/yabeizeng1121/individual_project_1/actions/workflows/cicd.yml)
 # IDS706 Individual Project 1 
 
 This project provides a comprehensive data analysis for a car dataset, including a Jupyter notebook, a Python script, shared library functions, and automated testing and linting via Makefile and GitHub Actions.
