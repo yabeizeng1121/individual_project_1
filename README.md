@@ -1,54 +1,71 @@
 
 ## IDS706 Individual Project 1
 
-This is a Python script for the IDS706 Mini Project 2. The script reads a CSV dataset, calculates descriptive statistics, and generates a histogram visualization. 
+This library provides a set of functions to load, summarize, and visualize data from a car dataset. The main functions include loading the data from a CSV file, generating a summary of the data, and creating a boxplot visualization based on the car's origin and weight.
 
-## Getting Started
+## Requirements
 
-Setting a copy of the project up and running on your local machine for development and testing purposes.
-
-## Prerequisites
-
-You will need to have the following packages installed:
-
+- Python 3.x
 - pandas
 - seaborn
 - matplotlib
 
-You can install these packages using pip:
+## Installation
+
+1. Ensure you have Python 3.x installed.
+2. Install the required packages using pip:
 
 ```bash
 pip install pandas seaborn matplotlib
 ```
 
+## Usage
 
-## Running the script
+### lib.py
 
-To run the script, use the following command:
+This script contains the main functions for data analysis. Here's a brief overview:
+
+- `load_data(data_path)`: Loads data from a CSV file. The data should be separated by semicolons (`;`).
+- `data_summary(data)`: Returns a summary (using `describe()`) of the provided data.
+- `data_visual(data)`: Displays a boxplot visualization of the data based on the car's origin and weight.
+- `main()`: A demonstration function that loads data from "cars.csv", prints its summary, and displays the boxplot visualization.
+
+To run the script:
 
 ```bash
-python main.py
+python lib.py
 ```
 
-## Running the tests
+### Test File
 
-To run the tests, use the following command:
+Ensure you have your test file in the same directory as `lib.py`. To run the tests:
 
 ```bash
-python test_main.py
+python test_filename.py
 ```
 
-## Results preview
+Replace `test_filename.py` with the actual name of your test file.
 
-![project2_histogram](https://github.com/yabeizeng1121/mini_project_2/assets/143656459/dbbaef2c-d68c-4b8d-b59f-3de43f6f00ca)
+### Jupyter Notebook
 
-![project2_data_summary](https://github.com/nogibjj/Mini_project_2_Yabei/assets/143656459/973ed1da-948c-4aa4-b5fe-d5cd06da283e)
+If you're using a Jupyter notebook to visualize and test the functions:
 
-![project2](https://github.com/nogibjj/Mini_project_2_Yabei/assets/143656459/94b139c6-00ee-4951-b487-c171d8cc06fc)
-![lint](https://github.com/nogibjj/Mini_project_2_Yabei/assets/143656459/8c98c760-57ec-4c26-9470-3755289acdc2)
-![test](https://github.com/nogibjj/Mini_project_2_Yabei/assets/143656459/68220046-4482-4a03-9a0a-37c80181e92b)
+1. Import the necessary functions from `lib.py`:
 
+```python
+from lib import load_data, data_summary, data_visual
+```
 
+2. Use the functions as demonstrated in the `main()` function of `lib.py`.
 
-## Whats more
-There are files ending with .pdf and .ipynb, these are the more readable script run outputs with some brief conclusions
+## Contributing
+
+If you'd like to contribute to this project, please fork the repository and submit a pull request.
+
+## License
+
+[MIT License](https://opensource.org/licenses/MIT)
+
+---
+
+Note: You might need to adjust some parts of the README, such as the test file name, or add more details if necessary.
