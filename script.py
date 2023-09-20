@@ -1,5 +1,5 @@
 import pandas as pd
-from lib import compute_mean, compute_median, compute_mode, compute_std_dev
+from lib 
 
 def main():
 
