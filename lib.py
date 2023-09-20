@@ -27,5 +27,10 @@ def data_visual(data):
         sns.boxplot(x='Origin', y='Weight', palette="Blues", data=data)
         plt.show()
 
+def main():
+    my_df = load_data("cars.csv")
+    print(data_summary(my_df))
+    data_visual(my_df)
+    
 if __name__ == "__main__":
     main()
