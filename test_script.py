@@ -1,6 +1,6 @@
 import unittest
 import pandas as pd
-from main_script import main
+from script import main
 from lib import load_data, data_summary
 
 class TestScript(unittest.TestCase):
